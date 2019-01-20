@@ -1,7 +1,7 @@
 package com.liuencier.web.config;
 
 import com.liuencier.web.filter.TimeFilter;
-import com.liuencier.web.intercepter.TimeIntercepter;
+import com.liuencier.web.intercepter.TimeInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -16,10 +16,10 @@ import java.util.List;
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
-    private TimeIntercepter timeIntercepter;
+    private TimeInterceptor timeInterceptor;
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(timeIntercepter);
+        registry.addInterceptor(timeInterceptor);
     }
 
     @Bean

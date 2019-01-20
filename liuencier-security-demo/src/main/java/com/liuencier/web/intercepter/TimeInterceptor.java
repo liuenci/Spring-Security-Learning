@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 @Component
-public class TimeIntercepter implements HandlerInterceptor {
+public class TimeInterceptor implements HandlerInterceptor {
 
 
     @Override
