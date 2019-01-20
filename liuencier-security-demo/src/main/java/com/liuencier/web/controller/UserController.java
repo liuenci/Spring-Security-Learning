@@ -49,11 +49,11 @@ public class UserController {
 	@GetMapping("/{id:\\d+}")
 	@JsonView(User.UserDetailView.class)
 	public User getInfo(@ApiParam("用户id") @PathVariable String id) {
-//		throw new RuntimeException("user not exist");
-		System.out.println("进入getInfo服务");
-		User user = new User();
-		user.setUsername("tom");
-		return user;
+		throw new RuntimeException("user not exist");
+//		System.out.println("进入getInfo服务");
+//		User user = new User();
+//		user.setUsername("tom");
+//		return user;
 	}
 
 	@PostMapping
