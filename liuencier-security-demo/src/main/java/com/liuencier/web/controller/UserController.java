@@ -50,9 +50,10 @@ public class UserController {
 	@JsonView(User.UserDetailView.class)
 	public User getInfo(@ApiParam("用户id") @PathVariable String id) {
 //		throw new RuntimeException("user not exist");
-		System.out.println("进入getInfo服务");
+		System.out.println("===== getInfo 方法执行开始");
 		User user = new User();
 		user.setUsername("tom");
+		System.out.println("===== getInfo 方法执行结束");
 		return user;
 	}
 
