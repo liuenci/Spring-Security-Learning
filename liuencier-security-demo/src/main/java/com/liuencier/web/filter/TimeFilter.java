@@ -20,7 +20,7 @@ public class TimeFilter implements Filter {
         filterChain.doFilter(servletRequest, servletResponse);
         long endTime = new Date().getTime();
         System.out.println("Filter end");
-        System.out.println("执行时间:" + (endTime - startTime));
+        System.out.println("Filter 执行时间:" + (endTime - startTime));
     }
 
     @Override
