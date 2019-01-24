@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.domain.Pageable;
@@ -32,6 +33,7 @@ public class UserController {
 
 	@GetMapping
 	@JsonView(User.UserSimpleView.class)
+	@ApiOperation(value = "用户查询服务")
 	public List<User> query(UserQueryCondition condition,
 			@PageableDefault(page = 2, size = 17, sort = "username,asc") Pageable pageable) {
 		// 通过反射将 json 字符串转化为 String 的多行方式
@@ -58,7 +60,7 @@ public class UserController {
 	}
 
 	@PostMapping
-//	@ApiOperation(value = "创建用户")
+	@ApiOperation(value = "创建用户")
 	public User create(@Valid @RequestBody User user, BindingResult errors) {
 		if (errors.hasErrors()) {
 			errors.getAllErrors().stream().forEach(e -> System.out.println(e.getDefaultMessage()));
