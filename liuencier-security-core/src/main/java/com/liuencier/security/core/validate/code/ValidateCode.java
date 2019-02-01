@@ -1,4 +1,4 @@
-package com.liuencier.security.core.validate;
+package com.liuencier.security.core.validate.code;
 
 import java.time.LocalDateTime;
 
