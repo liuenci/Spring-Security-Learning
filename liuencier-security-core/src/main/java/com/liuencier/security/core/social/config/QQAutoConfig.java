@@ -1,6 +1,7 @@
 package com.liuencier.security.core.social.config;
 
 import com.liuencier.security.core.properties.SecurityProperties;
+import com.liuencier.security.core.social.connect.QQConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,6 @@ public class QQAutoConfig extends SocialAutoConfigurerAdapter {
 
     @Override
     protected ConnectionFactory<?> createConnectionFactory() {
-        return new QQCon;
+        return new QQConnectionFactory(securityProperties.getSocial().getQq().getProviderId(), securityProperties.getSocial().getQq().getAppId(), securityProperties.getSocial().getQq().getAppSecret());
     }
 }
