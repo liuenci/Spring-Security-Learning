@@ -2,7 +2,6 @@ package com.liuencier.security.core.social.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.security.access.method.P;
 import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
 import org.springframework.social.oauth2.TokenStrategy;
 
